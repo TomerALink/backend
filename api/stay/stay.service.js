@@ -20,6 +20,7 @@ export const stayService = {
 
 async function query(filterBy = {}) {
 
+	console.log('stay query')
 	try {
 		const criteria = _buildCriteria(filterBy)
 		const sort = _buildSort(filterBy)

@@ -23,9 +23,11 @@ async function query(filterBy = {}) {
 	try {
 		const criteria = _buildCriteria(filterBy)
 		const sort = _buildSort(filterBy)
-
+		
 		const collection = await dbService.getCollection('stay')
+		console.log('collection:', collection)
 		var stayCursor = await collection.find(criteria, { sort })
+		console.log('stayCursor:',stayCursor)
 
 
 		if (filterBy.pageIdx !== undefined) {

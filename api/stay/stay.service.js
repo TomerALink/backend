@@ -20,16 +20,12 @@ export const stayService = {
 
 async function query(filterBy = {}) {
 
-	logger.info('stay query')
-	
 	try {
 		const criteria = _buildCriteria(filterBy)
 		const sort = _buildSort(filterBy)
-		
+
 		const collection = await dbService.getCollection('stay')
-		logger.info('collection:', collection)
 		var stayCursor = await collection.find(criteria, { sort })
-		logger.info('stayCursor:',stayCursor)
 
 
 		if (filterBy.pageIdx !== undefined) {

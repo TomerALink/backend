@@ -4,7 +4,7 @@ import { config } from '../config/index.js'
 import { logger } from './logger.service.js'
 
 export const dbService = { getCollection }
-console.log(config.dbURL)
+
 var dbConn = null
 
 async function getCollection(collectionName) {

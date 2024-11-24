@@ -29,7 +29,8 @@ if (process.env.NODE_ENV === 'production') {
         origin: [   'http://127.0.0.1:3000',
                     'http://localhost:3000',
                     'http://127.0.0.1:5173',
-                    'http://localhost:5173'
+                    'http://localhost:5173',
+                    'https://staybnb-m8or.onrender.com'
                 ],
         credentials: true
     }

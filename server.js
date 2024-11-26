@@ -21,7 +21,7 @@ const __dirname = path.dirname(__filename);
 // Express App Config
 app.use(cookieParser())
 app.use(express.json())
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')))
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.resolve('public')))
 } else {
